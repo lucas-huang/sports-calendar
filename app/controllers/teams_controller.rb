@@ -18,6 +18,7 @@ class TeamsController < ApplicationController
 
   # GET /teams/1/edit
   def edit
+  	@team = Team.find(params[:id])
   end
 
   # POST /teams or /teams.json
@@ -50,6 +51,7 @@ class TeamsController < ApplicationController
 
   # DELETE /teams/1 or /teams/1.json
   def destroy
+  	@team = Team.find(params[:id])
     @team.destroy
     respond_to do |format|
       format.html { redirect_to teams_url, notice: "Team was successfully destroyed." }
@@ -65,6 +67,6 @@ class TeamsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def team_params
-      params.permit(:name, :city, :description)
+      params.require(:team).permit(:name, :city, :description)
     end
 end

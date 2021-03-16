@@ -1,0 +1,47 @@
+<h1>Editing Match</h1>
+
+<%= form_with model: @match do |form| %>
+  <div>
+    <%= form.label :home_team_id %><br>
+    <%= form.collection_select :home_team_id, Team.order(:name), :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :away_team_id %><br>
+    <%= form.collection_select :away_team_id, Team.order(:name), :id, :name %>
+  </div>
+
+  <div>
+    <%= form.label :time %><br>
+    <%= form.datetime_local_field :time %>
+  </div>
+
+  <div>
+    <%= form.label :location %><br>
+    <%= form.text_area :location %>
+  </div>
+
+  <div>
+    <%= form.label :home_team_score %><br>
+    <%= form.number_field :home_team_score, min: 0%>
+  </div>
+
+  <div>
+    <%= form.label :away_team_score %><br>
+    <%= form.number_field :away_team_score, min: 0%>
+  </div>
+
+  <div>
+    <%= form.label :description %><br>
+    <%= form.text_area :description, min: 0%>
+  </div>
+
+  <div>
+  	<%= form.submit %>
+  </div>
+<% end %>
+
+<%= render 'form', match: @match %>
+
+<%= link_to 'Show', @match %> |
+<%= link_to 'Back', matches_path %>
