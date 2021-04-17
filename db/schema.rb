@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_09_040832) do
+ActiveRecord::Schema.define(version: 2021_04_17_023856) do
 
   create_table "matches", force: :cascade do |t|
     t.datetime "time"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2021_03_09_040832) do
     t.datetime "updated_at", precision: 6, null: false
     t.integer "home_matches_id"
     t.integer "away_matches_id"
+    t.boolean "favorite"
     t.index ["away_matches_id"], name: "index_teams_on_away_matches_id"
     t.index ["home_matches_id"], name: "index_teams_on_home_matches_id"
   end
