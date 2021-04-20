@@ -1,22 +1,29 @@
 <%= form_with(model: team) do |form| %>
-  <div>
-    <%= form.label :name %><br>
-    <%= form.text_field :name %>
-  </div>
+  <h3>
+    <div>
+      <%= form.label :favorite %><br>
+      <%= form.check_box :favorite, :class => 'checkbox_form_field' %>
+    </div>
 
-  <div>
-    <%= form.label :city %><br>
-    <%= form.text_field :city %>
-  </div>
+    <div>
+      <%= form.label :name %><br>
+      <%= form.text_field :name, :class => 'small_form_field'%>
+    </div>
 
-  <div>
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
-  </div>  
+    <div>
+      <%= form.label :city %><br>
+      <%= form.text_field :city, :class => 'small_form_field' %>
+    </div>
 
-  <div>
-  	<%= form.submit %>
-  </div>
+    <div>
+      <%= form.label :description %><br>
+      <%= form.text_area :description, :class => 'big_form_field' %>
+    </div>
+
+    <div>
+      <%= form.submit 'SUBMIT', :class => 'button form_button'%>
+    </div>
+  </h3>
   
   <% if team.errors.any? %>
     <div id="error_explanation">

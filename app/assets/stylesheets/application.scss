@@ -1,0 +1,230 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "simple_calendar";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  margin: 0px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+select {
+  width: 100%;
+  background-color: #e5e5e5;
+  border: 0;
+  padding: 10px;
+  height: 50px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.big_form_field {
+  width: 100%;
+  background-color: #e5e5e5;
+  border: 0;
+  padding: 10px;
+  height: 150px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.button {
+  background-color: #2770dd;
+  padding: 10px;
+  font-size: 14px;
+  border: 0;
+}
+
+.button a:link,
+.button a:visited,
+.button a:hover,
+.button a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.button_container {
+  flex: 1;
+  text-align: right;
+}
+
+.calendar_container {
+  flex: 3;
+}
+
+.checkbox_form_field {
+  margin-bottom: 30px;
+}
+
+.container {
+  padding-top: 100px;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4f4f4;
+  overflow: auto;
+}
+
+.date_text {
+  color: #808080;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.form_button {
+  font-family: "Open Sans", sans-serif;
+  color: #ffffff;
+  width: 150px;
+}
+
+.form_container {
+  width: 40%;
+  height: 100vh;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 50px 125px;
+  overflow: auto;
+}
+
+.header_container {
+  display: flex;
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  background-color: #2770dd;
+  align-items: center;
+}
+
+.header_link {
+  flex: 1;
+}
+
+.header_link a:link,
+.header_link a:visited,
+.header_link a:hover,
+.header_link a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.header_title {
+  flex: 8;
+}
+
+.list_container {
+  flex: 2;
+  justify-content: flex-end;
+  margin-top: 60px;
+}
+
+.matches_container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.open_sans_font {
+  font-family: "Open Sans", sans-serif;
+}
+
+.small_form_field {
+  width: 100%;
+  background-color: #e5e5e5;
+  border: 0;
+  padding: 10px;
+  height: 50px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.spacer {
+  height: 50px;
+  background-color: #f4f4f4;
+}
+
+.table_spacing {
+  padding-right: 35px;
+}
+
+.teams_container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: auto;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+.time_form_field {
+  width: 100%;
+  background-color: #e5e5e5;
+  border: 0;
+  padding-right: 3px;
+  padding: 10px;
+  height: 50px;
+  margin-bottom: 30px;
+  margin-top: 15px;
+}
+
+.title_container {
+  flex: 1;
+}
+
+.top_container {
+  display: flex;
+  width: 90%;
+  margin: auto;
+}
+
+.white_background {
+  width: 90%;
+  background-color: #ffffff;
+  margin: auto;
+}

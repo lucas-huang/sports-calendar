@@ -1,26 +1,39 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="spacer"></div>
+  <div class="teams_container" style="padding-top: 50px;">
+    <div class="top_container">
+      <div class="title_container">
+        <h1>TEAMS</h1>
+      </div>
+      <div class="button_container">
+        <button class="button open_sans_font">
+          <%= link_to 'NEW TEAM', new_team_path %>
+        </button>
+      </div>
+    </div>
+  </div>
 
-<h1>Teams</h1>
+  <div class="white_background">
+    <div class="teams_container" style="padding-bottom: 50px">
+      <div class="list_container">
+        <table>
+          <thead>
+            <tr>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @teams.each do |team| %>
-      <tr>
-        <td> <%= team.name %> </td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Team', new_team_path %>
+          <tbody>
+            <% @teams.each do |team| %>
+              <tr>
+                <td class="table_spacing"><h3><%= team.city %> <%= team.name %></h3></td>
+                <td class="table_spacing"><h3><% unless !team.favorite? %>Favorite<% end %></h3></td>
+                <td><h3><%= link_to 'Edit', edit_team_path(team) %></h3></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

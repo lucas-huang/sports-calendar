@@ -1,6 +1,7 @@
-<h1>Editing Team</h1>
-
-<%= render 'teams/form', team: @team %>
-
-<%= link_to 'Show', @team %> |
-<%= link_to 'Back', teams_path %>
+<div class="container">
+    <div class="spacer"></div>
+    <div class="form_container">
+        <h2>Edit Team</h2>
+        <%= render 'teams/form', team: @team %>
+    </div>
+</div>
